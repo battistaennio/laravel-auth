@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container m-3 overflow-auto">
+    <div class="container p-3 overflow-auto">
 
         @if ($errors->any())
             <div class="alert alert-danger" role="alert">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container m-3 overflow-auto">
+    <div class="container p-3 overflow-auto">
 
         @if (session('edit_confirm'))
             <div class="alert alert-success" role="alert">
