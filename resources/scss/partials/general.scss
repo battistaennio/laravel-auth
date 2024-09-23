@@ -11,12 +11,16 @@ aside {
     }
 }
 
+ul {
+    margin: 0;
+}
+
 li {
     list-style: none;
 }
 
 .main-wrapper {
-    height: calc(100vh - 56px);
+    height: calc(100vh - 40px);
 }
 
 aside {

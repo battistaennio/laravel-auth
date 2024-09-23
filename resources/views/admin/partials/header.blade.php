@@ -1,12 +1,12 @@
 <header>
     <div class="container-fluid text-bg-dark d-flex justify-content-between">
         {{-- parte sx --}}
-        <div>
+        <div class="navbar">
             <a href="{{ route('home') }}">Vai al sito</a>
         </div>
         {{-- parte dx --}}
-        <div>
-            <ul class="navbar">
+        <div class="navbar">
+            <ul>
                 {{-- visualizzazione guest --}}
                 @guest
                     <li class="nav-item mx-3">
@@ -31,7 +31,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
+                                                                        document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
