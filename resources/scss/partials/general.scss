@@ -14,3 +14,12 @@ aside {
 li {
     list-style: none;
 }
+
+.main-wrapper {
+    height: calc(100vh - 58px);
+}
+
+aside {
+    width: 200px;
+    height: 100%;
+}
