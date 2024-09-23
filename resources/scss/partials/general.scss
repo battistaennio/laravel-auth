@@ -1,0 +1,16 @@
+header,
+aside {
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+li {
+    list-style: none;
+}
