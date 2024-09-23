@@ -1,9 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container m-3">
+    <div class="container m-3 overflow-auto">
+
+        @if (session('edit_confirm'))
+            <div class="alert alert-success" role="alert">
+                {{ session('edit_confirm') }}
+            </div>
+        @endif
+
+
         <h1>
-            Dettaglio progetto "<strong>{{ $project->name }}</strong>"
+            Dettaglio progetto <a class="btn btn-warning" title="Modifica"
+                href="{{ route('admin.projects.edit', $project) }}"><i class="fa-solid fa-pen"></i></a>
+            <br>
+            "<strong>{{ $project->name }}</strong>"
         </h1>
 
         <div class="row my-1">

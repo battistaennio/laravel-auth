@@ -20,9 +20,16 @@
                         <td>{{ $project->main_topic }}</td>
                         <td><a href="{{ $project->repo_link }}">Vai alla repo</a></td>
                         <td>
-                            <a title="Dettagli" href="{{ route('admin.projects.show', $project) }}">
+                            <a class="btn btn-success" title="Dettagli" href="{{ route('admin.projects.show', $project) }}">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
+
+                            <a class="btn btn-warning" title="Modifica" href="{{ route('admin.projects.edit', $project) }}">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+
+                            @include('admin.partials.delete_form')
+
                         </td>
                     </tr>
                 @endforeach

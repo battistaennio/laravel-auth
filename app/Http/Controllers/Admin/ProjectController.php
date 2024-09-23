@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Functions\Helper;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -44,24 +46,34 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ProjectRequest $request, Project $project)
     {
-        //
+        $data = $request->all();
+
+        if ($data['name'] != $project->name) {
+            $data['slug'] = Helper::generateSlug($data['name'], Project::class);
+        }
+
+        $project->update($data);
+
+        return redirect()->route('admin.projects.show', compact('project'))->with('edit_confirm', 'Progetto modificato correttamente!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        return redirect(route('admin.projects.index'))->with('delete_confirm', 'Progetto "' . $project->title . '" eliminato correttamente');
     }
 }
