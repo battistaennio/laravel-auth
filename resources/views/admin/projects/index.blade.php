@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container my-3 overflow-auto">
+    <div class="container py-3 overflow-auto">
         <table class="table">
             <thead>
                 <tr>
