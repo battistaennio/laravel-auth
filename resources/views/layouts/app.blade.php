@@ -20,7 +20,12 @@
     @include('admin.partials.header')
 
     <div class="main-wrapper d-flex">
-        @include('admin.partials.aside')
+
+        {{-- se sono autenticato vedo l'aside --}}
+        @auth
+            @include('admin.partials.aside')
+        @endauth
+
         @yield('content')
     </div>
 </body>
