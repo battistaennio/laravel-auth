@@ -26,7 +26,7 @@
             @include('admin.partials.aside')
         @endauth
 
-        <div id="content-wrapper" class="container p-3">
+        <div id="content-wrapper" class="container-fluid p-3">
             @yield('content')
         </div>
     </div>
