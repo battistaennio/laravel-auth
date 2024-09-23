@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid p-4">
-        <h3>Questa è la home page dell'admin</h3>
-        <h5>Benvenuto {{ Auth::user()->name }}!</h5>
+        <h3>Benvenuto {{ Auth::user()->name }}!</h3>
+        <h5>Sono presenti {{ $count_projects }} progetti</h5>
     </div>
 @endsection
