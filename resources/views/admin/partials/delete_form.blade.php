@@ -1,5 +1,4 @@
-<form class="d-inline" action="{{ route('admin.projects.destroy', $project) }}" method="POST"
-    onsubmit="return confirm('Sei sicuro di voler definitivamente eliminare questo progetto? Tutti i dati di \'{{ $project->name }}\' verranno persi.')">
+<form class="d-inline" action="{{ $route }}" method="POST" onsubmit="return confirm('{{ $message }}')">
     @csrf
     @method('DELETE')
 

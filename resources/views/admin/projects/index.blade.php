@@ -27,7 +27,10 @@
                             <i class="fa-solid fa-pen"></i>
                         </a>
 
-                        @include('admin.partials.delete_form')
+                        @include('admin.partials.delete_form', [
+                            'route' => route('admin.projects.destroy', $project),
+                            'message' => "Sei sicuro di voler definitivamente eliminare questo progetto? Tutti i dati di $project->name verranno persi.",
+                        ])
 
                     </td>
                 </tr>
