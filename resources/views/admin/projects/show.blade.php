@@ -9,8 +9,10 @@
 
 
     <h1 class="text-center">
-        Dettaglio progetto <a class="btn btn-warning" title="Modifica" href="{{ route('admin.projects.edit', $project) }}"><i
-                class="fa-solid fa-pen"></i></a>
+        Dettaglio progetto
+        <a class="btn btn-warning" title="Modifica" href="{{ route('admin.projects.edit', $project) }}">
+            <i class="fa-solid fa-pen"></i>
+        </a>
         <br>
         "<strong>{{ $project->name }}</strong>"
     </h1>

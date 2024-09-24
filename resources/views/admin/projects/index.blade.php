@@ -32,6 +32,11 @@
                     </td>
                 </tr>
             @endforeach
+
         </tbody>
     </table>
+
+    <div class="d-flex justify-content-center">
+        {{ $projects->links() }}
+    </div>
 @endsection
